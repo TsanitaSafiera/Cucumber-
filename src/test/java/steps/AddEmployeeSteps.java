@@ -171,16 +171,16 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @Then("verify employee is stored in database")
     public void verifyEmployeeIsStoredInDatabase() {
-        String query="select emp_firstName,emp_middle_name,emp_lastname from hs_hr_employees where employee_id="+empID+";";
+        String query = "select emp_firstName,emp_middle_name,emp_lastname from hs_hr_employees where employee_id=" + empID + ";";
         System.out.println(query);
-        List<Map<String,String>> mapList = DBUtils.fetch(query);
-        Map<String,String> firstRow = mapList.get(0);
+        List<Map<String, String>> mapList = DBUtils.fetch(query);
+        Map<String, String> firstRow = mapList.get(0);
         String dbFirstName=firstRow.get("emp_firstName");
-        String dbMiddleName=firstRow.get("middle_name");
+        String dbMiddleName=firstRow.get("emp_middle_name");
         String dbLastName=firstRow.get("emp_lastname");
 
-        Assert.assertEquals("FirstName from front end does not match the firstName from database ", fnFirstName, dbFirstName);
-        Assert.assertEquals("MiddleName from front end does not match the middleName from database ", fnMiddleName, dbMiddleName);
-        Assert.assertEquals("LastName from front end does not match the lastName from database ", fnLastName, dbLastName);
+        Assert.assertEquals("FirstName from frontend does not match the firstname from database", fnFirstName,dbFirstName);
+        Assert.assertEquals("MiddleName from frontend does not match the MiddleName from database", fnMiddleName,dbMiddleName);
+        Assert.assertEquals("LastName from frontend does not match the LastName from database", fnLastName,dbLastName);
     }
 }
