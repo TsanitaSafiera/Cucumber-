@@ -20,7 +20,7 @@ public class HardCodedExamples {
     // base URI = Base URL
     String baseURI= RestAssured.baseURI="http://hrm.syntaxtechs.net/syntaxapi/api";
 
-    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTEwMDA0MTEsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MTA0MzYxMSwidXNlcklkIjoiNTY0MCJ9.VSCbRNOb1fIC3hEHkHwZQgho35UK4zwos-rjXI6SmH8";
+    String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTExMDcwNzcsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MTE1MDI3NywidXNlcklkIjoiNTY0MCJ9.1sM1814-3VVnZgGuVqXl_FL4nx7ht1m2dDkjhdHyp20";
 
     static String employee_id;
     // we try to do add employee request

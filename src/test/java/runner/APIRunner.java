@@ -1,6 +1,5 @@
 package runner;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -10,12 +9,12 @@ import org.junit.runner.RunWith;
         // features we use to provide the path of all feature file
         features = "src/test/resources/features/",
         // glue keyword we use to provide the package where steps definitions are available
-        glue = "steps",
+        glue = "APIStepDef",
         //  when dry run is true it stops actual execution, it quickly scan all the steps
         //  and will provide the missing definition
         dryRun = false,
-        //tags = "@sprint1 or @sprint2"
-        tags = "@addJob",
+        //tags = "@sprint1 or @sprint2"m
+        tags = "@api",
         // it means sometime the console output for cucumber test is having some
         // irrelevant information, when you set to true, it removes aa that
         // irrelevant information from the console and will give you simple output
@@ -23,11 +22,10 @@ import org.junit.runner.RunWith;
         // it used to print all the steps in console
         // html plugin is generating report, this report will be generated under
         // target folder
-        plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
-        "rerun:target/failed.txt"}
+        plugin = {"pretty"}
 
 )
 
-public class RunnerClass {
 
+public class APIRunner {
 }
